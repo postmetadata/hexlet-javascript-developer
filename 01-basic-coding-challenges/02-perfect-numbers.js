@@ -1,22 +1,21 @@
 const isPerfect = (num) => {
+  for (let counter = 1; counter <= num; counter += 1) {
+    if (counter * ((2 * counter) - 1) === num) return true;
+  }
+  return false;
+};
+// export default isPerfect;
 
-    let counter = 1;
-    let wisdom = false;
 
-    while (counter*(2*counter-1) <= num) {
-        if (counter*(2*counter-1) === num) {
-            wisdom = true;
-        }
-        counter += 1;
-    }
-    console.log(wisdom);
-}
-
-isPerfect(2);
-isPerfect(6);
-isPerfect(7);
-isPerfect(28);
-isPerfect(29);
-isPerfect(8128);
-isPerfect(60000);
-isPerfect(33550336);
+// Teacher's Answer
+// const isPerfect = (num) => {
+//     if (num === 0) return false;
+  
+//     let sum = 0;
+  
+//     for (let divisor = 1; divisor < num; divisor += 1) {
+//       if (num % divisor === 0) sum += divisor;
+//     }
+  
+//     return sum === num;
+//   };

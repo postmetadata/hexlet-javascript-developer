@@ -1,19 +1,26 @@
-// BEGIN (write your solution here)
-const reverseDigits = (num) => {
+const reverseInt = (num) => {
+    const reverse = String(Math.abs(num));
     let holder = '';
-    let reverse = Math.abs(num).toString();
-    let counter = reverse.length - 1;
-
-    if ((Math.abs(num)) != num ) {
-        holder += '-';
+    if (num < 0) holder += '-';
+    for (let counter = reverse.length - 1; counter >= 0; counter -= 1) {
+      holder += reverse[counter];
     }
-    
-    while (counter >= 0) {
-        holder += reverse[counter];
-        counter -= 1;        
-    }
+    return Number(holder);
+};
+  
+// export default reverseInt;
 
-    console.log(+holder);
-}
-
-reverseDigits(-9556);
+// teacher's answer
+// const reverseInt = (num) => {
+//     const numAsStr = String(Math.abs(num));
+//     let reversedStr = '';
+//     let i = length(numAsStr) - 1;
+  
+//     while (i >= 0) {
+//       reversedStr += numAsStr[i];
+//       i -= 1;
+//     }
+//     const reversedModule = Number(reversedStr);
+  
+//     return num < 0 ? -reversedModule : reversedModule;
+// };
