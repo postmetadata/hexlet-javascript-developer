@@ -11,6 +11,7 @@ const isPalindrome = (str) => {
 };
 
 console.log(isPalindrome('444'));
+console.log(isPalindrome('sononos'));
 
 // const isPalindrome = (str) => {
 //     // guard expression
