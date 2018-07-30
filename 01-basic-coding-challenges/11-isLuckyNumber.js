@@ -15,8 +15,5 @@ const isLuckyNumber = (num) => {
   const wisdom = temp1 === temp2;
   console.log(wisdom);
   return wisdom;
-
-
-
 }
 isLuckyNumber(4045);
